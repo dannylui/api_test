@@ -4,15 +4,14 @@ import logging
 
 
 class ClientBase:
-
     def __init__(self):
-        self._http = HttpConnector(config['host'])
+        self._http = HttpConnector(config["host"])
         self._resource = None
 
     def get(self, resource):
         status_code, response_json = self._http.get(resource)
         if status_code != 200:
-            raise Exception('response code was not success')
+            raise Exception("response code was not success")
         return response_json
 
     def get_collection(self):
@@ -24,7 +23,7 @@ class ClientBase:
     def post(self, resource, data):
         status_code, response_json = self._http.post(resource, data)
         if status_code != 201:
-            raise Exception('response code was not success')
+            raise Exception("response code was not success")
         return response_json
 
     def create_item(self, data):

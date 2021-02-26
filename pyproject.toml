@@ -7,6 +7,7 @@ authors = ["Dan Lui"]
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.25.1"
+black = {version = "^20.8b1", allow-prereleases = true}
 
 [tool.poetry.dev-dependencies]
 
