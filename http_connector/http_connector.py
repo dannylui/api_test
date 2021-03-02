@@ -1,6 +1,6 @@
 import requests
-import logging
 import functools
+import logging
 
 
 def debug(func):

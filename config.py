@@ -1,10 +1,10 @@
-import logging
+from box import Box
 
-config = {
+
+config = Box({
     "proto": "https",
     "host": "jsonplaceholder.typicode.com",
     "port": "",
     "base": "",
-}
-
-logging.info(f"{config=}")
+    "debug": True,
+})

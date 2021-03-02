@@ -1,11 +1,10 @@
 from http_connector.http_connector import HttpConnector
 from config import config
-import logging
 
 
 class ClientBase:
     def __init__(self):
-        self._http = HttpConnector(config["host"])
+        self._http = HttpConnector(config.host)
         self._resource = None
 
     def get(self, resource):
